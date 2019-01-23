@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\newtheorem{definisjon}{Definisjon}[section]
+\newtheorem{teorem}{Teorem}[section]
+
+\title{Algebraisk Geometri}
+\author{Jørgen }
+\date{January 2019}
+
+\begin{document}
+
+
+\maketitle
+
+\section{Grunnleggende algebra}
+\input{algebra.tex}
+\section{Algebraisk Geometri}
+\begin{definisjon}
+Et affine n-rom $\mathcal{A}^n(k)$ er alle $n$-tuppler i kroppen $k$. 
+\begin{equation*}
+    \mathcal{A}^n(k) = \{P = (a_1, \ldots, a_n) \in k^n \}
+\end{equation*}
+Ofte forkortes dette til bare $\mathcal{A}^n$ dersom det ikke er noe tvil om hvilken kropp det er snakk om. Elementene $P \in \mathcal{A}^n$ kalles punkter.
+\end{definisjon}
+\begin{definisjon}En affine algebraisk mengde $V(S)$ er en delmengde av $\mathcal{A}^n$ som er nullpunkter til funksjonene i mengden $S$. 
+\begin{equation*}
+ V(S) = \{P \in \mathcal{A}^n | F(P) = 0, \forall F \in S\}   
+\end{equation*}
+\end{definisjon}
+Det er ikke uvanlig at $S$ bare inneholder én funksjon. Hvis det er tilfellet vil den algebraiske mengden kun være nullpunktene til denne funksjonen. \textbf{Merk:} Nullpunktene til den tomme mengden $V(\emptyset)$ er hele det affine n-rommet. 
+\begin{definisjon}
+Idealet til en algebraisk mengde er ganske enkelt idealet generert av alle polynomene som tilfredsstiller alle nullpunktene.
+\begin{equation*}
+    I(V) = {F \in k[X_1, \ldots, X_n] | F(P) = 0, \forall P \in V}
+\end{equation*}
+\end{definisjon}
+\begin{definisjon}En affine algebraisk mengde V kalles en \textit{varietet} dersom idealet $I(V)$ er et primideal i $\overline{K}[X_1, \ldots, X_n]$. Vi skriver ofte $V/K$ for å indikere at $V$ er en varietet definert over $K$.
+\end{definisjon}
+\textit{Merk:} Det er ikke nok at den er et primideal i $K[X_1, \ldots, X_n]$
+\textbf{Moteksempel:} Idealet $(X_1^2 - 2X_2^2)$ er et primideal i $\mathcal(Q)[X_1, X_2]$.
+\begin{definisjon}
+La $V/K$ være en varietet, da er den affine \textbf{koordinatringen} $K[V]$ til $V/K$ definert på følgende måte
+\begin{equation*}
+    K[V] = \frac{K[X_1, \ldots, X_n]}{I(V/K)}
+\end{equation*}
+\end{definisjon}
+Siden $V/K$ er en varietet er dens ideal $I(V/K)$ et primideal, og når $K[X_1, \ldots, X_n]$ er en ring vil $K[V]$ være et integritetsområde. Det er derfor naturlig å utvide dette til en kropp.
+\begin{definisjon}
+Funksjonskroppen $K(V)$ er ganske enkelt kroppsutvidelsen til $K[V]$ slik at alle elementer $F \in K(V)$ kan skrives som $F = G + H$ for $G, H \in K[V]$.
+\end{definisjon}
+\end{document}

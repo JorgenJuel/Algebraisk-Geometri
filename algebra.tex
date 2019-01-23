@@ -1,0 +1,46 @@
+
+
+\begin{definisjon}
+En \textbf{gruppe} (G, +) er en mengde $G$ sammen med en binæroperasjon $+$, slik at:
+\begin{itemize}[noitemsep]
+    \item $(a+b) + c = a + (b + c)$
+    \item $ \exists e \in G: a+e = e = e+a,  \forall a \in G $
+    \item $\forall a \in G: \exists b \in G: a + b = e$
+\end{itemize}
+Dersom elementene i tillegg er kommutative, $a +b = b + a$ sier vi at gruppen er \textbf{abelsk}.
+\end{definisjon}
+
+\begin{definisjon}
+En \textbf{ring} (R, +, $\times$) er en mengde R sammen med to binæroperasjoner +, $\times$, slik at følgende gjelder:
+\begin{itemize}[noitemsep]
+    \item (R, +) er en abelsk gruppe
+    \item Assosiativitet over $\times$: $(ab)c = a(bc)$
+    \item Distributivitet over $\times$: $a(b + c) = ab + ac$ og $(a+b)c = ac + bc$
+\end{itemize}
+Dersom ringen $R$ er kommutativ med egenskapen $ab=0 \Rightarrow a = 0 \text{ eller } b = 0$ så kaller vi den et \textbf{integritetsområde}.
+\end{definisjon}
+
+\begin{definisjon}
+En ikke-tom delmengde $S$ av en ring $R$ kalles et \textbf{ideal} av $R$ dersom 
+\begin{enumerate}[noitemsep]
+    \item $a,b \in S \Rightarrow a-b \in S$
+    \item $a \in S, r \in R \Rightarrow ar \in S$ and $ra \in S$
+\end{enumerate}
+\end{definisjon}
+
+\begin{definisjon}
+Et ideal $P$ i en ring $R$ kalles et primideal dersom den har følgende egenskap: Hvis $A$ og $B$ er idealer i $R$ slik at $AB \subseteq P$ så er enten $A \subseteq P$ eller $B \subseteq P$. \\
+Dersom $R$ er kommutativ vil et ideal være et primideal hvis og bare hvis $$
+ab \in P, a,b \in R \Rightarrow a \in P \text{ eller } b \in P
+$$
+\end{definisjon}
+
+Vi skal nå se nærmere på hvordan vi kan utvide et integritetsområde til en kropp.
+La oss først definere en ekvivalensrelasjon $\sim$ over $R \times R \setminus \{0\}$ der $(a,b) \sim (a', b')$ dersom det finnes $c'' \in R \setminus \{0\}$ slik at $c''(rb' - r's) = 0$. Med ekvivalensrelasjonen kan vi la $a/b$ definere ekvivalensklassen som bestemmes av $(a,b)$, la så $R_S$ betegne mengden av alle ekvivalensklasser. \\
+
+ Vi definerer så aritmetikken på følgende måte: $a/b + c/d = (ad + cb)/(bd)$ og $a/b \cdot c/d = (ac)/(bd)$. $R_S$ med denne aritmetikken danner en Ring med enhet. 
+ 
+ \begin{teorem}
+ Ethvert kommutativt integritetsområde $R$ kan inkluderes i en kropp $R_s$ (som kalles kroppen av brøker). 
+ \textbf{Bevis:} Side 226, nøstes opp til 225.
+ \end{teorem}
