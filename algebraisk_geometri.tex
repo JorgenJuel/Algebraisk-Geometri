@@ -1,0 +1,52 @@
+
+\begin{definisjon}
+Et affine n-rom $\Affine^n(k)$ er alle $n$-tuppler i kroppen $k$. 
+\begin{equation*}
+    \Affine^n(\overline{K}) = \{P = (a_1, \ldots, a_n) \in \overline{K}^n \}
+\end{equation*}
+Ofte forkortes dette til bare $\Affine^n$ dersom det ikke er noe tvil om hvilken kropp det er snakk om. Elementene $P \in \Affine^n$ kalles punkter. I noen tilfeller ønsker man ikke å ha mengden av alle punkter, men heller bare såkalte $K-$rasjonelle punkter, dette tilsvarer $$\Affine^n(K) = \{P \in \Affine ^n | x_i \in K\}$$
+\end{definisjon}
+\begin{definisjon}En affine algebraisk mengde $V(S)$ er en delmengde av $\Affine^n$ som er nullpunkter til funksjonene i mengden $S$. 
+\begin{equation*}
+ V(S) = \{P \in \Affine^n | F(P) = 0, \forall F \in S\}   
+\end{equation*}
+\end{definisjon}
+Kan også skrives som $V/K$ for å indikere at det punkter fra det affine rommet over kroppen $K$.
+Det er ikke uvanlig at $S$ bare inneholder én funksjon. Hvis det er tilfellet vil den algebraiske mengden kun være nullpunktene til denne funksjonen. \textbf{Merk:} Nullpunktene til den tomme mengden $V(\emptyset)$ er hele det affine n-rommet. 
+\begin{definisjon}
+Idealet til en algebraisk mengde er ganske enkelt idealet generert av alle polynomene som tilfredsstiller alle nullpunktene.
+\begin{equation*}
+    I(V) = {F \in k[X_1, \ldots, X_n] | F(P) = 0, \forall P \in V}
+\end{equation*}
+\end{definisjon}
+Vi sier at en algebraisk mengde er definert over $K$ hvis polynomene som generer idealet ligger i $K[X]$, i så fall skriver vi $V/K$ for å indikere dette. De $K$-rasjonelle punktene til denne mengden  er ganske enkelt $V(K) = V \cap \Affine^n(K) $
+\begin{definisjon}En affine algebraisk mengde V kalles en \underline{varietet} dersom idealet $I(V)$ er et primideal i $\overline{K}[X_1, \ldots, X_n]$.
+\end{definisjon}
+\textit{Merk:} Det er ikke nok at den er et primideal i $K[X_1, \ldots, X_n]$
+\textbf{Moteksempel:} Idealet $(X_1^2 - 2X_2^2)$ er et primideal i $\mathcal(Q)[X_1, X_2]$.
+\begin{definisjon}
+La $V/K$ være en varietet, da er den affine \textbf{koordinatringen} $K[V]$ til $V/K$ definert på følgende måte
+\begin{equation*}
+    K[V] = \frac{K[X_1, \ldots, X_n]}{I(V/K)}
+\end{equation*}
+\end{definisjon}
+Siden $V/K$ er en varietet er dens ideal $I(V/K)$ et primideal, og når $K[X_1, \ldots, X_n]$ er en ring vil $K[V]$ være et integritetsområde. Det er derfor naturlig å utvide dette til en kropp.
+\begin{definisjon}
+Funksjonskroppen $K(V)$ er ganske enkelt kroppsutvidelsen til $K[V]$ slik at alle elementer $F \in K(V)$ kan skrives som $F = G + H$ for $G, H \in K[V]$.
+\end{definisjon}
+\subsection{Projektive varieteter}
+\begin{definisjon}
+Det projektive n-rommet (over $K$) skrives som $\Projective ^n$ eller $\Projective^n(\overline{K})$ og er mengden $(n+1)-$tupler, $(x_0, \ldots x_n) \in \Affine ^{n+1}$ slik at minst en $x_i$ er ikkenull modulo ekvivalensrelasjonen $(x_0, \ldots x_n) \sim (y_0, \ldots y_n)$ dersom $\exists \lambda \in \overline{K}^*$ slik at $\forall i \in \{0, \ldots, n\}: x_i = \lambda y_i$. 
+
+Selve ekvivalensklassen $\{(\lambda x_0, \ldots, \lambda x_n): \lambda \in \overline{K}^*$ skrives som regel $[x_0, \ldots, x_n]$.
+\end{definisjon}
+Når vi definerer en projektiv algebraisk mengde går vi denne gangen motsatt vei, nemlig om idealet til mengden. 
+\begin{definisjon}
+Et ideal $I \subset \overline{K}[X]$ er homogent dersom det genereres av homogene polynomer. 
+\end{definisjon}
+\begin{definisjon}
+En prosjektiv algebraisk mengde er nullpunktene til alle homogene polynomer i et hogoment ideal. $$V(K) = \{P \in \Projective^n : f(P) = 0 \text{ for alle homogene polynomer } f \in I\}$$
+\end{definisjon}
+På samme måte som før, dersom idealet til $V$ er et primideal i $\overline{K}[X]$, så er $V$ en varietet.
+
+Når det gjelder funksjonskropp og koordinatring defineres disse ikke ut i fra den projektive varieteten, men den tilhørende affine varieteten.
